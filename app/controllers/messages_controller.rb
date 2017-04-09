@@ -18,7 +18,7 @@ class MessagesController < ApplicationController
       flash[:success] = 'Message が正常に投稿されました'
       redirect_to @message
     else
-      flash.nwo[:danger] = 'Message が投稿されませんでした'
+      flash.now[:danger] = 'Message が投稿されませんでした'
       render :new
     end
       
@@ -52,5 +52,5 @@ end
 
 # Strong Parameter
 def message_params
-  params/require(:message).permit(:content)
+  params.require(:message).permit(:content)
 end
