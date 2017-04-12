@@ -50,7 +50,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  ppol: 5
+  pool: 5
   database: message-board_production
   username: message-board
   password: <%= ENV['MESSAGE-BOARD_DATABASE_PASSWORD'] %>
